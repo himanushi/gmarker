@@ -16,7 +16,7 @@
 
       $.each( gDivs, function( _, gDiv ) {
         var
-          mapData = $( gDiv ).children(),
+          mapData = $( gDiv ).children( 'span' ),
           centerMarker = {
             lat: $( mapData[0] ).data( 'longitude' ),
             lng: $( mapData[0] ).data( 'latitude' )
