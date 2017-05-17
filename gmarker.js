@@ -34,13 +34,15 @@
           var marker = new google.maps.Marker( {
             position: { lat: $( mData ).data( 'longitude' ),
                         lng: $( mData ).data( 'latitude' ) },
-            map: map,
-            title: $( mData ).data( 'title' )
+            map: map
           } );
 
           // Set Icon
           if ( $( mData ).data( 'icon' ) ) {
-            marker.setOptions( { icon: { url: $( mData ).data( 'icon' ) } } )
+            marker.setOptions( { icon: {
+              url: $( mData ).data( 'icon' ),
+              scaledSize: new google.maps.Size(35, 35)
+            } } )
           }
 
           // Set anime
