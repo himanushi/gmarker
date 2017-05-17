@@ -52,7 +52,7 @@
 
           // Set Event
           if ( $( mData ).data( 'event' ) ) {
-            var infoWindow = new google.maps.InfoWindow( { content: $( mData ).data( 'event' ) } );
+            var infoWindow = new google.maps.InfoWindow( { content: unescape( $( mData ).data( 'event' ) ) } );
             marker.addListener( 'click', function() {
               infoWindow.open( map, marker );
             } );
